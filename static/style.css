@@ -1,0 +1,248 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0f172a;
+    color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+     min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 32px 20px 40px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    color: #9ca3af;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 220px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    background: #020617;
+    color: #e5e7eb;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+textarea::placeholder {
+    color: #6b7280;
+}
+
+button {
+    margin-top: 16px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+.example {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.example code {
+    display: block;
+    margin-top: 6px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: #020617;
+    border: 1px solid #1f2937;
+    white-space: pre-wrap;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    border-radius: 999px;
+    padding: 4px 10px;
+    border: 1px solid #1f2937;
+    background: #020617;
+    color: #9ca3af;
+}
+
+.pill span.circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #22c55e;
+}
+
+a.button,
+button.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+a.button:hover,
+button.button:hover {
+    background: #2563eb;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #374151;
+    color: #e5e7eb;
+}
+
+.secondary:hover {
+    background: #020617;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+    gap: 20px;
+}
+
+@media (max-width: 800px) {
+    main {
+    grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.card {
+    background: radial-gradient(circle at top left, #111827, #020617);
+    border-radius: 16px;
+    padding: 16px 18px 18px;
+    border: 1px solid #111827;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+}
+
+.meta-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.meta-list li {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(15,23,42,0.7);
+    border: 1px solid #1f2937;
+    color: #9ca3af;
+}
+
+.section {
+    margin-top: 8px;
+}
+
+.section h3 {
+    font-size: 0.95rem;
+    margin: 10px 0 6px;
+    color: #d1d5db;
+}
+
+.flows-list,
+.threats-list {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.88rem;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    border: 1px solid #1f2937;
+    background: #020617;
+    color: #9ca3af;
+}
+
+.tag span.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: #f97316;
+}
+
+.empty {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-style: italic;
+    margin: 4px 0 0;
+}
+
+.threat-item {
+    margin-bottom: 6px;
+}
+
+.threat-item strong {
+    color: #e5e7eb;
+}
+
+.threat-meta {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+footer {
+    margin-top: 22px;
+    font-size: 0.78rem;
+    color: #6b7280;
+}

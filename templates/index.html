@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Threat Modeling Agent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Threat Modeling Agent</h1>
+    <p class="subtitle">
+      Describe your system in natural language. The agent will extract components, data flows,
+      generate a STRIDE-based threat list, and build a draw.io diagram.
+    </p>
+
+    <form action="/generate" method="POST">
+      <label for="description">System description</label>
+      <textarea
+        id="description"
+        name="description"
+        placeholder="Example: A Flask web application where users can sign up, log in, and access a personal dashboard. The app talks to a PostgreSQL database. Admins can log into an admin panel to view all users. The app also calls an external payment API over HTTPS..."
+        required
+      ></textarea>
+
+      <button type="submit">Generate Threat Model</button>
+    </form>
+
+    <div class="example">
+      <strong>Need inspiration?</strong>
+      <code>
+A React frontend calls a Flask API. The API reads and writes from a MongoDB database. 
+There is an admin dashboard for managing users and changing their roles. 
+Authentication is done with JWTs stored in localStorage. 
+The app is deployed on a single VM exposed to the internet over HTTPS.
+      </code>
+    </div>
+  </div>
+</body>
+</html>

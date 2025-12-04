@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Threat Model Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Threat Model Results</h1>
+      </div>
+      <div>
+        <a href="/" class="button secondary">← New system description</a>
+        <a href="/download" class="button">⬇ Download draw.io diagram</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>System Overview</h2>
+
+        <h3>Actors</h3>
+        {% if actors %}
+          <ul class="chips">
+            {% for actor in actors %}
+              <li>{{ actor }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="empty">No actors detected.</p>
+        {% endif %}
+
+        <h3>Components</h3>
+        {% if components %}
+          <ul class="chips">
+            {% for c in components %}
+              <li>{{ c }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="empty">No components detected.</p>
+        {% endif %}
+
+        <h3>Data Flows</h3>
+        {% if flows %}
+          <ul>
+            {% for f in flows %}
+              <li>{{ f }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="empty">No data flows inferred.</p>
+        {% endif %}
+      </section>
+
+      <section class="card">
+        <h2>STRIDE Threats</h2>
+
+        {% if threats %}
+          <ul>
+            {% for threat in threats %}
+              <li class="threat-item">
+                <strong>{{ threat.title }}</strong>
+                <div class="threat-meta">
+                  Category: {{ threat.category }}<br />
+                  Component: {{ threat.component }}
+                </div>
+                <div class="threat-meta">
+                  {{ threat.description }}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="empty">No threats generated.</p>
+        {% endif %}
+      </section>
+    </main>
+
+    <footer>
+      Open the downloaded <code>.drawio</code> file in <strong>draw.io / diagrams.net</strong> to view and edit the generated diagram.
+    </footer>
+  </div>
+</body>
+</html>
