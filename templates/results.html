@@ -78,6 +78,19 @@
           <p class="empty">No threats generated.</p>
         {% endif %}
       </section>
+
+      <h2>Architecture Diagram</h2>
+      <div class="card">
+        <div class="diagram-wrapper" style="height: 420px; background: #020617; border-radius: 16px; overflow: hidden;">
+          <div
+            class="mxgraph"
+            style="width:100%; height:100%; border:1px solid transparent;"
+            data-mxgraph='{{ mx_config | tojson | safe }}'>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
     </main>
 
     <footer>
