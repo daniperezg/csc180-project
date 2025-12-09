@@ -1,7 +1,9 @@
 # Agentic AI Project: AI Threat Modeling Agent
 ### CSC 180: Intro to Intelligent Systems
 
-<br>
+![Cover Page](images/index_page.png)
+![Results Page](images/results_page.png)
+![Architecture Diagram](images/reslts_page_diagram.png)
 
 This project is a small **agentic AI** web app that turns a natural-language system description into:
 - a list of **actors**, **components**, and **data flows**
